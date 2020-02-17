@@ -76,7 +76,7 @@ For these lessons, we will be interacting with [GitHub](https://github.com/) and
 > 
 {: .callout}
 
-Dracula also has to set his favorite text editor, following this table:
+Alfredo also has to set his favorite text editor, following this table:
 
 | Editor             | Configuration command                            |
 |:-------------------|:-------------------------------------------------|
