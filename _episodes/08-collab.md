@@ -42,14 +42,14 @@ To clone the Owner's repo into
 her `Desktop` folder, the Collaborator enters:
 
 ~~~
-$ git clone https://github.com/vlad/planets.git ~/Desktop/vlad-planets
+$ git clone https://github.com/alflin/recipes.git ~/Desktop/alflin-recipes
 ~~~
 {: .language-bash}
 
-Replace 'vlad' with the Owner's username.
+Replace 'alflin' with the Owner's username.
 
 If you choose to clone without the clone path
-(`~/Desktop/vlad-planets`) specified at the end,
+(`~/Desktop/alflin-recipes`) specified at the end,
 you will clone inside your own planets folder!
 Make sure to navigate to the `Desktop` folder first.
 
@@ -59,26 +59,30 @@ The Collaborator can now make a change in her clone of the Owner's repository,
 exactly the same way as we've been doing before:
 
 ~~~
-$ cd ~/Desktop/vlad-planets
-$ nano pluto.txt
-$ cat pluto.txt
+$ cd ~/Desktop/alflin-recipes
+$ nano hummus.md
+$ cat hummus.md
 ~~~
 {: .language-bash}
 
 ~~~
-It is so a planet!
+# Ingredients
+- chickpeas
+- lemon
+- olive oil
+- salt
 ~~~
 {: .output}
 
 ~~~
-$ git add pluto.txt
-$ git commit -m "Add notes about Pluto"
+$ git add hummus.md
+$ git commit -m "Add ingredients for hummus"
 ~~~
 {: .language-bash}
 
 ~~~
- 1 file changed, 1 insertion(+)
- create mode 100644 pluto.txt
+ 1 file changed, 5 insertion(+)
+ create mode 100644 hummus.md
 ~~~
 {: .output}
 
@@ -96,7 +100,7 @@ Delta compression using up to 4 threads.
 Compressing objects: 100% (2/2), done.
 Writing objects: 100% (3/3), 306 bytes, done.
 Total 3 (delta 0), reused 0 (delta 0)
-To https://github.com/vlad/planets.git
+To https://github.com/alflin/recipes.git
    9272da5..29aba7c  main -> main
 ~~~
 {: .output}
@@ -122,7 +126,7 @@ your browser to see the new commit.
 > time to get the latest updates that other people have committed.
 >
 > Remember that the name you give to a remote only exists locally. It's
-> an alias that you choose - whether `origin`, or `upstream`, or `fred` -
+> an alias that you choose - whether `origin`, or `upstream`, or `alfred` -
 > and not something intrinstic to the remote repository.
 >
 > The `git remote` family of commands is used to set up and alter the remotes
@@ -138,7 +142,7 @@ your browser to see the new commit.
 > account, or from GitHub to a different hosting service. Or, if we made a typo when
 > adding it!
 > * `git remote rename [oldname] [newname]` changes the local alias by which a remote 
-> is known - its name. For example, one could use this to change `upstream` to `fred`.
+> is known - its name. For example, one could use this to change `upstream` to `alfred`.
 {: .callout}
 
 To download the Collaborator's changes from GitHub, the Owner now enters:
@@ -154,14 +158,14 @@ remote: Counting objects: 100% (4/4), done.
 remote: Compressing objects: 100% (2/2), done.
 remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
 Unpacking objects: 100% (3/3), done.
-From https://github.com/vlad/planets
+From https://github.com/alflin/recipes
  * branch            main     -> FETCH_HEAD
    9272da5..29aba7c  main     -> origin/main
 Updating 9272da5..29aba7c
 Fast-forward
- pluto.txt | 1 +
- 1 file changed, 1 insertion(+)
- create mode 100644 pluto.txt
+ hummus.md | 5 +
+ 1 file changed, 5 insertion(+)
+ create mode 100644 hummus.md
 ~~~
 {: .output}
 
