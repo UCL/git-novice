@@ -118,7 +118,7 @@ We'll discuss remotes in more detail in the next episode, while
 talking about how they might be used for collaboration.
 
 ## SSH Background and Setup
-Before Dracula can connect to a remote repository, he needs to set up a way for his computer to authenticate with GitHub so it knows it’s him trying to connect to his remote repository. 
+Before Alfredo can connect to a remote repository, he needs to set up a way for his computer to authenticate with GitHub so it knows it’s him trying to connect to his remote repository. 
 
 We are going to set up the method that is commonly used by many different services to authenticate access on the command line.  This method is called Secure Shell Protocol (SSH).  SSH is a cryptographic network protocol that allows secure communication between computers using an otherwise insecure network.  
 
@@ -149,19 +149,19 @@ ls -al ~/.ssh
 
 Your output is going to look a little different depending on whether or not SSH has ever been set up on the computer you are using. 
 
-Dracula has not set up SSH on his computer, so his output is 
+Alfredo has not set up SSH on his computer, so his output is 
 
 ~~~
-ls: cannot access '/c/Users/Vlad Dracula/.ssh': No such file or directory
+ls: cannot access '/c/Users/Alfredo/.ssh': No such file or directory
 ~~~
 {: .output}
 
 If SSH has been set up on the computer you're using, the public and private key pairs will be listed. The file names are either `id_ed25519`/`id_ed25519.pub` or `id_rsa`/`id_rsa.pub` depending on how the key pairs were set up.  
 
-Since they don’t exist on Dracula’s computer, he uses this command to create them: 
+Since they don’t exist on Alfredo’s computer, he uses this command to create them: 
 
 ~~~
-$ ssh-keygen -t ed25519 -C "vlad@tran.sylvan.ia"
+$ ssh-keygen -t ed25519 -C "a.linguini@ratatouille.fr"
 ~~~
 {: .language-bash}
 
@@ -170,19 +170,19 @@ If you are using a legacy system that doesn't support the Ed25519 algorithm, use
 
 ~~~
 Generating public/private ed25519 key pair.
-Enter file in which to save the key (/c/Users/Vlad Dracula/.ssh/id_ed25519):
+Enter file in which to save the key (/c/Users/Alfredo/.ssh/id_ed25519):
 ~~~
 {: .output}
 
 We want to use the default file, so just press <kbd>Enter</kbd>.
 
 ~~~
-Created directory '/c/Users/Vlad Dracula/.ssh'.
+Created directory '/c/Users/Alfredo/.ssh'.
 Enter passphrase (empty for no passphrase):
 ~~~
 {: .output}
 
-Now, it is prompting Dracula for a passphrase.  Since he is using his lab’s laptop that other people sometimes have access to, he wants to create a passphrase.  Be sure to use something memorable or save your passphrase somewhere, as there is no "reset my password" option. 
+Now, it is prompting Alfredo for a passphrase.  Since he is using his kitchen’s laptop that other people sometimes have access to, he wants to create a passphrase.  Be sure to use something memorable or save your passphrase somewhere, as there is no "reset my password" option. 
 
 ~~~
 Enter same passphrase again:
@@ -192,10 +192,10 @@ Enter same passphrase again:
 After entering the same passphrase a second time, we receive the confirmation
 
 ~~~
-Your identification has been saved in /c/Users/Vlad Dracula/.ssh/id_ed25519
-Your public key has been saved in /c/Users/Vlad Dracula/.ssh/id_ed25519.pub
+Your identification has been saved in /c/Users/Alfredo/.ssh/id_ed25519
+Your public key has been saved in /c/Users/Alfredo/.ssh/id_ed25519.pub
 The key fingerprint is:
-SHA256:SMSPIStNyA00KPxuYu94KpZgRAYjgt9g4BA4kFy3g1o vlad@tran.sylvan.ia
+SHA256:SMSPIStNyA00KPxuYu94KpZgRAYjgt9g4BA4kFy3g1o a.linguini@ratatouille.fr
 The key's randomart image is:
 +--[ED25519 256]--+
 |^B== o.          |
@@ -222,10 +222,10 @@ ls -al ~/.ssh
 {: .language-bash}
 
 ~~~
-drwxr-xr-x 1 Vlad Dracula 197121   0 Jul 16 14:48 ./
-drwxr-xr-x 1 Vlad Dracula 197121   0 Jul 16 14:48 ../
--rw-r--r-- 1 Vlad Dracula 197121 419 Jul 16 14:48 id_ed25519
--rw-r--r-- 1 Vlad Dracula 197121 106 Jul 16 14:48 id_ed25519.pub
+drwxr-xr-x 1 Alfredo   197121   0 Jul 16 14:48 ./
+drwxr-xr-x 1 Alfredo   197121   0 Jul 16 14:48 ../
+-rw-r--r-- 1 Alfredo   197121 419 Jul 16 14:48 id_ed25519
+-rw-r--r-- 1 Alfredo   197121 106 Jul 16 14:48 id_ed25519.pub
 ~~~
 {: .output}
 
@@ -258,13 +258,13 @@ cat ~/.ssh/id_ed25519.pub
 {: .language-bash}
 
 ~~~
-ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDmRA3d51X0uu9wXek559gfn6UFNF69yZjChyBIU2qKI vlad@tran.sylvan.ia
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDmRA3d51X0uu9wXek559gfn6UFNF69yZjChyBIU2qKI a.linguini@ratatouille.fr
 ~~~
 {: .output}
 
 Now, going to GitHub.com, click on your profile icon in the top right corner to get the drop-down menu.  Click "Settings," then on the 
 settings page, click "SSH and GPG keys," on the left side "Account settings" menu.  Click the "New SSH key" button on the right side. Now, 
-you can add the title (Dracula uses the title "Vlad's Lab Laptop" so he can remember where the original key pair
+you can add the title (Alfredo uses the title "Alfredo's Kitchen Laptop" so he can remember where the original key pair
 files are located), paste your SSH key into the field, and click the "Add SSH key" to complete the setup.
 
 Now that we’ve set that up, let’s check our authentication again from the command line. 
@@ -274,7 +274,7 @@ $ ssh -T git@github.com
 {: .language-bash}
 
 ~~~
-Hi Vlad! You've successfully authenticated, but GitHub does not provide shell access.
+Hi Alfredo! You've successfully authenticated, but GitHub does not provide shell access.
 ~~~
 {: .output}
 
@@ -288,7 +288,7 @@ $ git push origin main
 ~~~
 {: .language-bash}
 
-Since Dracula set up a passphrase, it will prompt him for it.  If you completed advanced settings for your authentication, it 
+Since Alfredo set up a passphrase, it will prompt him for it.  If you completed advanced settings for your authentication, it 
 will not prompt for a passphrase. 
 
 ~~~
