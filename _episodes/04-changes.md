@@ -321,7 +321,7 @@ $ git commit -m "Add basic guacamole's ingredients"
 {: .language-bash}
 
 ~~~
-[master 34961b1] Add basic guacamole's ingredient
+[main 34961b1] Add basic guacamole's ingredient
  1 file changed, 3 insertions(+)
 ~~~
 {: .output}
@@ -456,7 +456,7 @@ $ git commit -m "Modify guacamole to the traditional recipe"
 {: .language-bash}
 
 ~~~
-[master 005937f] Modify guacamole to the traditional recipe
+[main 005937f] Modify guacamole to the traditional recipe
  1 file changed, 1 insertion(+)
 ~~~
 {: .output}
