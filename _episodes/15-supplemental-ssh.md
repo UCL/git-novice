@@ -137,7 +137,7 @@ ssh-add ~/.ssh/id_ed25519
 ~~~
 {: .language-bash}
 ~~~
-Identity added: /c/Users/Vlad Dracula/.ssh/id_ed25519 (vlad@tran.sylvan.ia)
+Identity added: /c/Users/Alfredo/.ssh/id_ed25519 (a.linguini@ratatouille.fr)
 ~~~
 {: .output}
 This will ask you to enter the _passphrase_ of your _private key_.
@@ -200,7 +200,7 @@ FIXME: PAT
 if PAT is removed, you'll receive the following:
 git push origin main
 remote: Invalid username or password.
-fatal: Authentication failed for 'https://github.com/vlad/planets.git/'
+fatal: Authentication failed for 'https://github.com/alflin/recipes.git/'
 
 entering a second time
 git push origin main
