@@ -369,7 +369,7 @@ Let's watch as our changes to a file move from our editor
 to the staging area
 and into long-term storage.
 First,
-we'll add another line to the file:
+we'll improve our recipe by changing 'lemon' to 'lime':
 
 ~~~
 $ nano guacamole.md
@@ -407,7 +407,7 @@ index 315bf3a..b36abfd 100644
 {: .output}
 
 So far, so good:
-we've added one line to the end of the file
+we've replaced one line (shown with a `-` in the first column) with a new line
 (shown with a `+` in the first column).
 Now let's put that change in the staging area
 and see what `git diff` reports:
