@@ -50,7 +50,7 @@ Replace 'alflin' with the Owner's username.
 
 If you choose to clone without the clone path
 (`~/Desktop/alflin-recipes`) specified at the end,
-you will clone inside your own planets folder!
+you will clone inside your own recipes folder!
 Make sure to navigate to the `Desktop` folder first.
 
 ![After Creating Clone of Repository](../fig/github-collaboration.svg)
@@ -109,7 +109,7 @@ Note that we didn't have to create a remote called `origin`: Git uses this
 name by default when we clone a repository.  (This is why `origin` was a
 sensible choice earlier when we were setting up remotes by hand.)
 
-Take a look at the Owner’s repository on GitHub again, and you should be 
+Take a look at the Owner’s repository on GitHub again, and you should be
 able to see the new commit made by the Collaborator. You may need to refresh
 your browser to see the new commit.
 
@@ -117,12 +117,12 @@ your browser to see the new commit.
 >
 > In this episode and the previous one, our local repository has had
 > a single "remote", called `origin`. A remote is a copy of the repository
-> that is hosted somewhere else, that we can push to and pull from, and 
-> there's no reason that you have to work with only one. For example, 
+> that is hosted somewhere else, that we can push to and pull from, and
+> there's no reason that you have to work with only one. For example,
 > on some large projects you might have your own copy in your own GitHub
 > account (you'd probably call this `origin`) and also the main "upstream"
 > project repository (let's call this `upstream` for the sake of examples).
-> You would pull from `upstream` from time to 
+> You would pull from `upstream` from time to
 > time to get the latest updates that other people have committed.
 >
 > Remember that the name you give to a remote only exists locally. It's
@@ -135,13 +135,13 @@ your browser to see the new commit.
 > * `git remote -v` lists all the remotes that are configured (we already used
 > this in the last episode)
 > * `git remote add [name] [url]` is used to add a new remote
-> * `git remote remove [name]` removes a remote. Note that it doesn't affect the 
+> * `git remote remove [name]` removes a remote. Note that it doesn't affect the
 > remote repository at all - it just removes the link to it from the local repo.
-> * `git remote set-url [name] [newurl]` changes the URL that is associated 
+> * `git remote set-url [name] [newurl]` changes the URL that is associated
 > with the remote. This is useful if it has moved, e.g. to a different GitHub
 > account, or from GitHub to a different hosting service. Or, if we made a typo when
 > adding it!
-> * `git remote rename [oldname] [newname]` changes the local alias by which a remote 
+> * `git remote rename [oldname] [newname]` changes the local alias by which a remote
 > is known - its name. For example, one could use this to change `upstream` to `alfred`.
 {: .callout}
 
@@ -205,7 +205,7 @@ GitHub) are back in sync.
 > > them. Then by running ```git diff main origin/main``` the Collaborator
 > > will see the changes output in the terminal.
 > >
-> > On GitHub, the Collaborator can go to the repository and click on 
+> > On GitHub, the Collaborator can go to the repository and click on
 > > "commits" to view the most recent commits pushed to the repository.
 > {: .solution}
 {: .challenge}
