@@ -59,7 +59,7 @@ Replace 'alflin' with the Owner's username.
 
 If you choose to clone without the clone path
 (`~/Desktop/alflin-recipes`) specified at the end,
-you will clone inside your own planets folder!
+you will clone inside your own recipes folder!
 Make sure to navigate to the `Desktop` folder first.
 
 ![](fig/github-collaboration.svg){alt='After Creating Clone of Repository'}

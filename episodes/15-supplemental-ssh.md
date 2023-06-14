@@ -1,0 +1,249 @@
+---
+title: 'Supplemental: In-Depth SSH'
+teaching: 20
+exercises: 0
+---
+
+::::::::::::::::::::::::::::::::::::::: objectives
+
+- 
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::::: questions
+
+- How can I save my SSH passphrase on a secure computer?
+- What are SSH-keys, and how do I use them securely?
+- What is the SSH-Agent and why do I want to use it?
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
+## Why is SSH in a Git Lesson?
+
+GitHub used to allow command line (CLI) authentication using only username and password, which
+uses HTTPS protocol.  However, this actually creates security risks, so, they removed
+the CLI username/password option.  Instead, they kept two options which provide more
+robust security: SSH, which is a widely used protocol; and Personal Access Tokens (PAT), which uses
+the HTTPS protocol, and is
+specific to GitHub.  The minimum level of SSH to connect to GitHub is described in episode 7.
+
+This supplemental episode discusses SSH and key pairs in more depth and detail,
+and provides details of advanced setup of SSH for GitHub.  It is included in this Git lesson
+because the philosophy of The Carpentries lessons is to provide an immediate hands-on example
+of the practical skills which are demonstrated.  GitHub and other cloud-based services provide this for SSH.
+
+Tutorials for common git cloud based services are found at [GitHub][github], [Atlassian/Bitbucket][bitbucket] and
+[GitLab][gitlab] (this one has a screencast).
+
+The manual for SSH commands can be found at [OpenSSH][open-ssh].  If you *really* want to understand the algorithms
+behind SSH, a very good book which provides background to cryptography, including descriptions of algorithms currently
+used, is "The Code Book: The Science of Secrecy from Ancient Egypt to Quantum Cryptography" by Simon Singh.  Published in 1999, the
+book provides an early example of the padlock-key analogy for public key cryptosystems widely used.
+
+## Saving SSH on a Secure Computer
+
+Most cloud based services will suggest the following command line sequence:
+
+```bash
+ls -al ~/.ssh
+ssh-keygen -t ed25519 -C "your_email@example.com"
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+```
+
+The episode "Remotes in GitHub" covered the first two lines, but omitted the last two.  This section
+will explain the other two lines and what they do.
+
+## A Bit of Background
+
+### SSH Key-Pairs
+
+An SSH key pair consists of a *public key* (e.g. `id_ed25519.pub` or `id_rsa.pub`) and a
+*private key* (`id_ed25519` or `id_rsa`).
+The *public key* can be thought of as a padlock and the *private key* as the key that can open that padlock.
+A user can attach their *public key* to an account (e.g. on GitHub or an SSH server) and the server
+lets anyone who has the matching *private key* (the key that can open the padlock) access that account.
+
+As the *private key* can now be used instead of a password, it is **highly recommended** to protect
+it with a strong *passphrase* (i.e. a strong and long password that can consist of several words).
+This prevents an attacker who somehow managed to steal (or make a copy of) the *private key* file to
+use it, unless they know the *passphrase*.
+
+When using the *private key*, we now have to use the *passphrase* of the *private key* instead of
+the password of the account.
+
+### The SSH-Agent
+
+An *SSH-agent* is a program that can run on your computer and can securely hold your *private key*
+in memory.  You only need to enter your *passphrase* when adding your *private key* to the
+*SSH-agent*.  Whenever you try connect via SSH (e.g. during git `push`, `pull` or `fetch`), the
+*SSH-server* can "talk" to the *SSH-agent* to verify whether it has a matching key.
+
+This way you don't have to enter the key's *passphrase* every time you run `git push` or `git pull`
+but only need to enter the *passphrase* only once in a new terminal window.
+
+On macOS and many Linux desktops, a *keychain* application can play the role of the *SSH-agent*.
+
+:::::::::::::::::::::::::::::::::::::::::  callout
+
+## SSH Agent on Linux Desktops
+
+You can most likely skip the steps of starting the SSH-Agent and adding the keys, as most
+Linux distributions are starting the SSH-Agent in the background and using it for the first
+time will open a pop-up window in which you can enter your password.
+
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::::::  callout
+
+## SSH Agent on macOS
+
+The macOS Keychain can act as an SSH Agent and you don't need to start the SSH-Agent manually.
+Either add the private SSH key via the menu or use the following command:
+
+```bash
+ssh-add -K ~/.ssh/id_ed25519
+```
+
+This `-K` option is specific for macOS and confirmed to work with macOS up to version FIXME:.
+Newer versions of OpenSSH use the `ssh-add -K` option to manage SSH keys stored on physical
+security-keys and this option may change in a future version of macOS.
+
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::::::  callout
+
+## SSH Agent on Windows
+
+You probably want to continue running these commands:
+
+```bash
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+```
+
+As this will work in "Git Bash", the Windows "Command Line", Windows Subsystem for Linux 1 \& 2
+(WSL), MobaXterm and others.
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+FIXME: Add how to convert OpenSSH key to PuTTY format using PuTTYgen, start Pageant and
+tell git to use plink.exe instead of ssh.exe as the ssh-client.
+
+## Using the SSH-Agent
+
+As so often, there are many paths one can take to reach to the same goal.  The following commands
+will work on most machines, no matter if you are using macOS, Windows or Linux.
+
+The following command starts the *SSH-agent* and sets an environment-variable, so that ssh and git
+can use it:
+
+```bash
+eval "$(ssh-agent -s)"
+```
+
+```output
+Agent pid 2106
+```
+
+Next we add our *private ssh-key* to the *SSH-agent*:
+
+```bash
+ssh-add ~/.ssh/id_ed25519
+```
+
+```output
+Identity added: /c/Users/Alfredo/.ssh/id_ed25519 (a.linguini@ratatouille.fr)
+```
+
+This will ask you to enter the *passphrase* of your *private key*.
+
+You will need to run both commands any time you open a new terminal window.
+
+## Remove or Replace a Passphrase
+
+```bash
+ssh-keygen -p
+```
+
+This will then prompt you to enter the keyfile location, the old passphrase, and the new passphrase.
+You could leave the new passphrase blank to remove it, however this is **not recommended**!
+
+If you would like to do it all on one line without prompts do:
+
+```bash
+ssh-keygen -p [-P old_passphrase] [-N new_passphrase] [-f keyfile]
+```
+
+## Removing a Key Pair
+
+What happens if your private key is compromised?
+
+On GitHub:
+
+- Click on your profile icon in the top right corner to get the drop-down menu.
+- Click "Settings," then on the settings page,
+- Click "SSH and GPG keys," on the left side "Account settings" menu.
+- Click the [Delete] button next to your SSH-key.
+
+If you have used the key with GitLab, you should remove it there as well, by going to your account's
+"Preferences", via the profile icon in the top right corner, and clicking on "SSH Keys" in the
+"User Settings" menu on the left side and then the "trash-can" (delete) icon next to the key.
+
+On your computer:
+
+```bash
+ssh-add -D <ssh key path> 
+ls -al ~/.ssh
+rm ~/.ssh/id_ed25519
+cat ~/.ssh/id_ed25519.pub
+rm ~/.ssh/id_ed25519.pub
+```
+
+:::::::::::::::::::::::::::::::::::::::::  callout
+
+## Have you used your SSH-key in other places?
+
+Also if you have have added your *public ssh-key* on any other account, e.g. by using the
+`ssh-copy-id` command or manually adding it to the file `~/.ssh/authorized_keys`) then make sure
+to remove is key from the `~/.ssh/authorized_keys`\-file on all computers and all accounts.
+
+We haven't covered the how to do that in this Git-lesson, but
+If you don't, then you are leaving a backdoor for whoever has managed to steal your private key.
+
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
+## Personal Access Tokens
+
+FIXME: PAT  
+if PAT is removed, you'll receive the following:
+git push origin main
+remote: Invalid username or password.
+fatal: Authentication failed for '[https://github.com/alflin/recipes.git/](https://github.com/alflin/recipes.git/)'
+
+entering a second time
+git push origin main
+brought up OpenSSH for me.
+
+```bash
+git config --global --unset credential.helper
+```
+
+FIXME: Windows 10: Credential Manager  
+FIXME: remove git credential.
+
+[github]: https://help.github.com/articles/generating-ssh-keys
+[bitbucket]: https://confluence.atlassian.com/bitbucket/set-up-ssh-for-git-728138079.html
+[gitlab]: https://about.gitlab.com/2014/03/04/add-ssh-key-screencast
+[open-ssh]: https://www.openssh.com
+
+
+:::::::::::::::::::::::::::::::::::::::: keypoints
+
+- 
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
+

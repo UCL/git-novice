@@ -157,6 +157,44 @@ CONFLICT (content): Merge conflict in guacamole.md
 Automatic merge failed; fix conflicts and then commit the result.
 ```
 
+:::::::::::::::::::::::::::::::::::::::::  callout
+
+## You may need to tell git what to do
+
+If you see the below in your output, git is asking what it should do.
+
+```output
+hint: You have divergent branches and need to specify how to reconcile them.
+hint: You can do so by running one of the following commands sometime before
+hint: your next pull:
+hint:
+hint:   git config pull.rebase false  # merge (the default strategy)
+hint:   git config pull.rebase true   # rebase
+hint:   git config pull.ff only       # fast-forward only
+hint:
+hint: You can replace "git config" with "git config --global" to set a default
+hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+hint: or --ff-only on the command line to override the configured default per
+hint: invocation.
+```
+
+In newer versions of git it gives you the option of specifying different
+behaviours when a pull would merge divergent branches. In our case we want
+'the default strategy'. To use this strategy run the following command to
+select it as the default thing git should do.
+
+```bash
+$ git config pull.rebase false
+```
+
+Then attempt the pull again.
+
+```bash
+$ git pull origin main
+```
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
 The `git pull` command updates the local repository to include those
 changes already included in the remote repository.
 After the changes from remote branch have been fetched, Git detects that changes made to the local copy
