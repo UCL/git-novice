@@ -1,11 +1,15 @@
-[![Create a Slack Account with us](https://img.shields.io/badge/Create_Slack_Account-The_Carpentries-071159.svg)](https://swc-slack-invite.herokuapp.com/) 
- [![Slack Status](https://img.shields.io/badge/Slack_Channel-swc--git-E01563.svg)](https://swcarpentry.slack.com/messages/C91JS49HD) 
+> **ATTENTION** This is an experimental test of [The Carpentries Workbench](https://carpentries.github.io/workbench) lesson infrastructure.
+> It was automatically converted from the source lesson via [the lesson transition script](https://github.com/carpentries/lesson-transition/).
+> 
+> If anything seems off, please contact Zhian Kamvar [zkamvar@carpentries.org](mailto:zkamvar@carpentries.org)
 
-UCL's git-novice
-================
+[![Create a Slack Account with us](https://img.shields.io/badge/Create_Slack_Account-The_Carpentries-071159.svg)](https://swc-slack-invite.herokuapp.com/)
+[![Slack Status](https://img.shields.io/badge/Slack_Channel-swc--git-E01563.svg)](https://swcarpentry.slack.com/messages/C91JS49HD)
+
+# UCL's git-novice
 
 An introduction to version control for novices using Git (with the UCL's twist).
-Please see [the rendered version of this material](http://github-pages.ucl.ac.uk/git-novice/),
+Please see [the rendered version of this material](https://github-pages.ucl.ac.uk/git-novice/),
 and [the lesson template documentation][lesson-example]
 for instructions on formatting, building, and submitting material,
 or run `make` in this directory for a list of helpful commands.
@@ -14,24 +18,25 @@ or run `make` in this directory for a list of helpful commands.
 
 ## Upstream
 
-* [Nima Hejazi][hejazi_nima]: [@nhejazi](https://github.com/nhejazi)
-* [Kat Koziar][koziar_kat]: [@kekoziar](https://github.com/kekoziar)
-* [Madicken Munk][munk_madicken]: [@munkm](https://github.com/munkm)
+- [Nima Hejazi][hejazi_nima]: [@nhejazi](https://github.com/nhejazi)
+- [Kat Koziar][koziar_kat]: [@kekoziar](https://github.com/kekoziar)
+- [Madicken Munk][munk_madicken]: [@munkm](https://github.com/munkm)
 
 Alumni maintainers:
-* [Ivan Gonzalez][gonzalez_ivan]: [@iglpdc](https://github.com/iglpdc)
-* [Daisie Huang][huang_daisie]: [@daisieh](https://github.com/daisieh)
 
+- [Ivan Gonzalez][gonzalez_ivan]: [@iglpdc](https://github.com/iglpdc)
+- [Daisie Huang][huang_daisie]: [@daisieh](https://github.com/daisieh)
 
 ## UCL's
 
-* David Pérez-Suárez [@dpshelio](https://github.com/dpshelio)
+- David Pérez-Suárez [@dpshelio](https://github.com/dpshelio)
 
-
-[gonzalez_ivan]: https://carpentries.org/instructors/#iglpdc
+[lesson-example]: https://swcarpentry.github.io/lesson-example
 [hejazi_nima]: https://carpentries.org/instructors/#nhejazi
-[huang_daisie]: https://software-carpentry.org/team/#huang_daisie
 [koziar_kat]: https://carpentries.org/instructors/#kekoziar
 [munk_madicken]: https://carpentries.org/instructors/#munkm
-[lesson-example]: https://swcarpentry.github.io/lesson-example
+[gonzalez_ivan]: https://carpentries.org/instructors/#iglpdc
+[huang_daisie]: https://software-carpentry.org/team/#huang_daisie
+
+
 

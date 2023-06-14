@@ -1,5 +1,4 @@
 ---
-layout: page
 title: Setup
 ---
 
@@ -8,10 +7,12 @@ for instructions on installing Git.
 
 We'll do our work in the `Desktop` folder so make sure you change your working directory to it with:
 
-~~~
+```bash
 $ cd
 $ cd Desktop
-~~~
-{: .language-bash}
+```
 
 [workshop-setup]: https://carpentries.github.io/workshop-template/#git
+
+
+
