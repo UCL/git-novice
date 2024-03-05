@@ -373,8 +373,8 @@ line.</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> nano guacamole.md</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cat guacamole.md</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="ex">$</span> nano guacamole.md</span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="ex">$</span> cat guacamole.md</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -390,7 +390,7 @@ An ill-considered change</code></pre>
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git diff HEAD guacamole.md</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="ex">$</span> git diff HEAD guacamole.md</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -413,7 +413,7 @@ to refer to the commit one before <code>HEAD</code>.</p>
 <div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git diff HEAD~1 guacamole.md</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="ex">$</span> git diff HEAD~1 guacamole.md</span></code></pre>
 </div>
 <p>If we want to see the differences between older commits we can use
 <code>git diff</code> again, but with the notation <code>HEAD~1</code>,
@@ -421,7 +421,7 @@ to refer to the commit one before <code>HEAD</code>.</p>
 <div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git diff HEAD~2 guacamole.md</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="ex">$</span> git diff HEAD~2 guacamole.md</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -444,7 +444,7 @@ we see by using <code>git diff</code>.</p>
 <div class="codewrapper sourceCode" id="cb8">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git show HEAD~2 guacamole.md</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="ex">$</span> git show HEAD~2 guacamole.md</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -479,7 +479,7 @@ this:</p>
 <div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git diff f22b25e3233b4645dabd0d81e651fe074bd8e73b guacamole.md</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a><span class="ex">$</span> git diff f22b25e3233b4645dabd0d81e651fe074bd8e73b guacamole.md</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -502,7 +502,7 @@ seven for normal size projects):</p>
 <div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git diff f22b25e guacamole.md</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a><span class="ex">$</span> git diff f22b25e guacamole.md</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -528,7 +528,7 @@ but those changes haven’t been staged:</p>
 <div class="codewrapper sourceCode" id="cb14">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git status</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a><span class="ex">$</span> git status</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -547,8 +547,8 @@ no changes added to commit (use "git add" and/or "git commit -a")</code></pre>
 <div class="codewrapper sourceCode" id="cb16">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git checkout HEAD guacamole.md</span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cat guacamole.md</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" tabindex="-1"></a><span class="ex">$</span> git checkout HEAD guacamole.md</span>
+<span id="cb16-2"><a href="#cb16-2" tabindex="-1"></a><span class="ex">$</span> cat guacamole.md</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -567,12 +567,12 @@ even further, we can use a commit identifier instead:</p>
 <div class="codewrapper sourceCode" id="cb18">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git checkout f22b25e guacamole.md</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" tabindex="-1"></a><span class="ex">$</span> git checkout f22b25e guacamole.md</span></code></pre>
 </div>
 <div class="codewrapper sourceCode" id="cb19">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cat guacamole.md</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" tabindex="-1"></a><span class="ex">$</span> cat guacamole.md</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -583,7 +583,7 @@ even further, we can use a commit identifier instead:</p>
 <div class="codewrapper sourceCode" id="cb21">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git status</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" tabindex="-1"></a><span class="ex">$</span> git status</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -601,21 +601,20 @@ can put things back the way they were by using
 <div class="codewrapper sourceCode" id="cb23">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git checkout HEAD guacamole.md</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1" tabindex="-1"></a><span class="ex">$</span> git checkout HEAD guacamole.md</span></code></pre>
 </div>
-<div id="dont-lose-your-head" class="callout callout">
+<div id="callout1" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div id="dont-lose-your-head" class="callout-inner">
-<h3 class="callout-title">Don’t Lose Your HEAD<a class="anchor" aria-label="anchor" href="#dont-lose-your-head"></a>
-</h3>
+<div class="section level3 callout-title callout-inner">
+<h3 class="callout-title" id="dont-lose-your-head">Don’t Lose Your HEAD<a class="anchor" aria-label="anchor" href="#dont-lose-your-head"></a></h3>
 <div class="callout-content">
 <p>Above we used</p>
 <div class="codewrapper sourceCode" id="cb24">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git checkout f22b25e guacamole.md</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb24-1"><a href="#cb24-1" tabindex="-1"></a><span class="ex">$</span> git checkout f22b25e guacamole.md</span></code></pre>
 </div>
 <p>to revert <code>guacamole.md</code> to its state after the commit
 <code>f22b25e</code>. But be careful! The command <code>checkout</code>
@@ -625,7 +624,7 @@ forget <code>guacamole.md</code> in the previous command.</p>
 <div class="codewrapper sourceCode" id="cb25">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git checkout f22b25e</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb25-1"><a href="#cb25-1" tabindex="-1"></a><span class="ex">$</span> git checkout f22b25e</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">ERROR<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -657,20 +656,20 @@ which we made the change we’re trying to discard. In the example below,
 we want to retrieve the state from before the most recent commit
 (<code>HEAD~1</code>), which is commit <code>f22b25e</code>:</p>
 <figure><img src="fig/git-checkout.svg" alt="Git Checkout" class="figure mx-auto d-block"></figure><p>So, to put it all together, here’s how Git works in cartoon form:</p>
-<figure><img src="fig/git_staging.svg" alt="" class="figure mx-auto d-block"><figcaption><a href="https://figshare.com/articles/How_Git_works_a_cartoon/1328266" class="external-link uri">https://figshare.com/articles/How_Git_works_a_cartoon/1328266</a></figcaption></figure><div id="simplifying-the-common-case" class="callout callout">
+<figure><img src="fig/git_staging.svg" alt="https://figshare.com/articles/How_Git_works_a_cartoon/1328266" class="figure mx-auto d-block"><div class="figcaption"><a href="https://figshare.com/articles/How_Git_works_a_cartoon/1328266" class="external-link uri">https://figshare.com/articles/How_Git_works_a_cartoon/1328266</a></div>
+</figure><div id="callout2" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div id="simplifying-the-common-case" class="callout-inner">
-<h3 class="callout-title">Simplifying the Common Case<a class="anchor" aria-label="anchor" href="#simplifying-the-common-case"></a>
-</h3>
+<div class="section level3 callout-title callout-inner">
+<h3 class="callout-title" id="simplifying-the-common-case">Simplifying the Common Case<a class="anchor" aria-label="anchor" href="#simplifying-the-common-case"></a></h3>
 <div class="callout-content">
 <p>If you read the output of <code>git status</code> carefully, you’ll
 see that it includes this hint:</p>
 <div class="codewrapper sourceCode" id="cb27">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="kw">(</span><span class="ex">use</span> <span class="st">"git checkout -- &lt;file&gt;..."</span> to discard changes in working directory<span class="kw">)</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb27-1"><a href="#cb27-1" tabindex="-1"></a><span class="kw">(</span><span class="ex">use</span> <span class="st">"git checkout -- &lt;file&gt;..."</span> to discard changes in working directory<span class="kw">)</span></span></code></pre>
 </div>
 <p>As it says, <code>git checkout</code> without a version identifier
 restores files to the state saved in <code>HEAD</code>. The double dash
@@ -798,13 +797,13 @@ changes to the repository.</p>
 <div class="codewrapper sourceCode" id="cb28">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cd recipes</span>
-<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> echo <span class="st">"I like tomatos, therefore I like ketchup"</span> <span class="op">&gt;</span> ketchup.md</span>
-<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git add ketchup.md</span>
-<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> echo <span class="st">"ketchup enchances pasta dishes"</span> <span class="op">&gt;</span> ketchup.md</span>
-<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git commit <span class="at">-m</span> <span class="st">"my opinions about the red sauce"</span></span>
-<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git checkout HEAD ketchup.md</span>
-<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cat ketchup.md <span class="co"># this will print the content of ketchup.md on screen</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb28-1"><a href="#cb28-1" tabindex="-1"></a><span class="ex">$</span> cd recipes</span>
+<span id="cb28-2"><a href="#cb28-2" tabindex="-1"></a><span class="ex">$</span> echo <span class="st">"I like tomatos, therefore I like ketchup"</span> <span class="op">&gt;</span> ketchup.md</span>
+<span id="cb28-3"><a href="#cb28-3" tabindex="-1"></a><span class="ex">$</span> git add ketchup.md</span>
+<span id="cb28-4"><a href="#cb28-4" tabindex="-1"></a><span class="ex">$</span> echo <span class="st">"ketchup enchances pasta dishes"</span> <span class="op">&gt;</span> ketchup.md</span>
+<span id="cb28-5"><a href="#cb28-5" tabindex="-1"></a><span class="ex">$</span> git commit <span class="at">-m</span> <span class="st">"my opinions about the red sauce"</span></span>
+<span id="cb28-6"><a href="#cb28-6" tabindex="-1"></a><span class="ex">$</span> git checkout HEAD ketchup.md</span>
+<span id="cb28-7"><a href="#cb28-7" tabindex="-1"></a><span class="ex">$</span> cat ketchup.md <span class="co"># this will print the content of ketchup.md on screen</span></span></code></pre>
 </div>
 <ol style="list-style-type: decimal"><li><div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -923,7 +922,7 @@ unstage the file:</p>
 <div class="codewrapper sourceCode" id="cb35">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git reset HEAD guacamole.md</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb35-1"><a href="#cb35-1" tabindex="-1"></a><span class="ex">$</span> git reset HEAD guacamole.md</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -954,8 +953,8 @@ file to the previous commit:</p>
 <div class="codewrapper sourceCode" id="cb38">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git checkout <span class="at">--</span> guacamole.md</span>
-<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git status</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb38-1"><a href="#cb38-1" tabindex="-1"></a><span class="ex">$</span> git checkout <span class="at">--</span> guacamole.md</span>
+<span id="cb38-2"><a href="#cb38-2" tabindex="-1"></a><span class="ex">$</span> git status</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -988,7 +987,7 @@ apply a similar idea here.</p>
 <div class="codewrapper sourceCode" id="cb40">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git log guacamole.md</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb40-1"><a href="#cb40-1" tabindex="-1"></a><span class="ex">$</span> git log guacamole.md</span></code></pre>
 </div>
 <p>Unfortunately some of these commit messages are very ambiguous, e.g.,
 <code>update files</code>. How can you search through these files?</p>
@@ -998,7 +997,7 @@ possible to combine both? Let’s try the following:</p>
 <div class="codewrapper sourceCode" id="cb41">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git log <span class="at">--patch</span> guacamole.md</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb41-1"><a href="#cb41-1" tabindex="-1"></a><span class="ex">$</span> git log <span class="at">--patch</span> guacamole.md</span></code></pre>
 </div>
 <p>You should get a long list of output, and you should be able to see
 both commit messages and the difference between each commit.</p>
@@ -1006,7 +1005,7 @@ both commit messages and the difference between each commit.</p>
 <div class="codewrapper sourceCode" id="cb42">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git log <span class="at">--patch</span> HEAD~9 <span class="pp">*</span>.md</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb42-1"><a href="#cb42-1" tabindex="-1"></a><span class="ex">$</span> git log <span class="at">--patch</span> HEAD~9 <span class="pp">*</span>.md</span></code></pre>
 </div>
 </div>
 </div>
@@ -1088,7 +1087,7 @@ both commit messages and the difference between each commit.</p>
   "identifier": "https://swcarpentry.github.io/git-novice/05-history.html",
   "dateCreated": "2014-12-04",
   "dateModified": "2023-07-13",
-  "datePublished": "2024-02-27"
+  "datePublished": "2024-03-05"
 }
 
   </script><script>
