@@ -82,6 +82,21 @@ And on Windows:
 $ git config --global core.autocrlf true
 ```
 
+## Merge Strategy
+
+As we already know, git is clever and can help us to combine two different versions of the same file that has been worked on in parallel. This is known as merging. There are multiple strategies that git can utilise to 
+merge two different versions:
+
+1. Standard merge
+2. Rebase
+
+The exact details of these strategies are beyond the scope of this lesson, but a standard merge should be your default strategy unless there's a good reason to use rebase. We can set the default strategy git will use
+with the command:
+
+```
+$ git config --global pull.rebase false
+```
+
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 Alfredo also has to set his favorite text editor, following this table:
