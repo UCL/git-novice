@@ -94,7 +94,7 @@ The exact details of these strategies are beyond the scope of this lesson, but a
 with the command:
 
 ```
-$ got config --global pull.rebase false
+$ git config --global pull.rebase false
 ```
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
